@@ -305,8 +305,8 @@
                 <configuration>
                     <!-- Ref.: http://books.sonatype.com/nexus-book/reference/staging-deployment.html -->
                     <autoReleaseAfterClose>true</autoReleaseAfterClose>
-                    <serverId>ossrh</serverId>
-                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                    <serverId>nexus</serverId>
+                    <nexusUrl>https://nexus.topdesk.com/nexus/</nexusUrl>
                 </configuration>
             </plugin>
             <plugin>
