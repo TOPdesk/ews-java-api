@@ -211,6 +211,7 @@ public abstract class ExchangeServiceBase implements Closeable {
     PoolingHttpClientConnectionManager httpConnectionManager = new PoolingHttpClientConnectionManager(registry);
     httpConnectionManager.setMaxTotal(maximumPoolingConnections);
     httpConnectionManager.setDefaultMaxPerRoute(maximumPoolingConnections);
+    httpConnectionManager.setDefaultSocketConfig(SocketConfig.custom().setSoTimeout(timeout).build());
     AuthenticationStrategy authStrategy = new CookieProcessingTargetAuthenticationStrategy();
 
     httpPoolingClient = HttpClients.custom()
