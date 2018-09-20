@@ -194,21 +194,23 @@
     </ciManagement>
 
     <scm>
-        <url>https://github.com/OfficeDev/ews-java-api</url>
-        <connection>scm:git:ssh://git@github.com:OfficeDev/ews-java-api.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com:OfficeDev/ews-java-api.git</developerConnection>
+        <url>https://github.com/TOPdesk/ews-java-api</url>
+        <connection>scm:git:ssh://git@github.com:TOPdesk/ews-java-api.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:TOPdesk/ews-java-api.git</developerConnection>
       <tag>initial</tag>
-  </scm>
+    </scm>
 
     <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh-snapshot</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
         <repository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+            <id>nexus</id>
+            <name>Nexus repo</name>
+            <url>dav:https://nexus.topdesk.com/nexus/content/repositories/releases/ </url>
         </repository>
+        <snapshotRepository>
+            <id>nexus</id>
+            <name>Nexus Snapshot repo</name>
+            <url>dav:https://nexus.topdesk.com/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
     </distributionManagement>
 
     <dependencies>
